@@ -7,3 +7,8 @@
     text-wrap: balance;
   }
 }
+
+* {
+  padding: 0;
+  margin: 0;
+}
