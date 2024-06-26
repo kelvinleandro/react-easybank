@@ -10,10 +10,11 @@ const Header = () => {
     <div className="w-full flex items-center justify-between px-6 py-4 md:px-20">
       <Image src={logo} alt="logo" className="cursor-pointer" />
 
-      <div className="hidden md:flex gap-3">
+      <div className="hidden md:flex gap-6">
         {navItems.map((item, index) => (
-          <div key={index} className="cursor-pointer text-grayish-blue hover:text-dark-blue">
-            <p>{item}</p>
+          <div key={index} className="group cursor-pointer font-medium text-grayish-blue hover:text-dark-blue relative">
+            <p className="mb-5">{item}</p>
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-lime-green to-bright-cyan scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-300 mt-4"></div>
           </div>
         ))}
       </div>
