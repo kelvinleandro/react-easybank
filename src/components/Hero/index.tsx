@@ -6,7 +6,7 @@ import mockups from "@/assets/image-mockups.png";
 
 const Hero = () => {
   return (
-    <div className="relative w-full bg-very-light-gray flex flex-col md:flex-row-reverse md:items-center">
+    <div className="relative w-full bg-very-light-gray flex flex-col md:flex-row-reverse md:items-center pb-12">
       <div className="relative">
         <Image
           src={bg_mobile}
