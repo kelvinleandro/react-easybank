@@ -1,11 +1,10 @@
 import React from "react";
-import Image from "next/image";
-import logo from "@/assets/logo.svg";
 import IconFacebook from "@/components/Icons/IconFacebook"
 import IconYoutube from "../Icons/IconYoutube";
 import IconTwitter from "../Icons/IconTwitter";
 import IconPinterest from "../Icons/IconPinterest";
 import IconInstagram from "../Icons/IconInstagram";
+import IconLogo from "../Icons/IconLogo";
 
 const icons = [IconFacebook, IconYoutube, IconTwitter, IconPinterest, IconInstagram]
 
@@ -22,12 +21,8 @@ const Footer = () => {
   return (
     <div className="w-full flex flex-col md:flex-row items-center md:justify-between px-9 py-8 md:py-14 md:px-28 bg-dark-blue">
       <div className="md:flex gap-24 items-center">
-        <div className="flex flex-col gap-5">
-          <Image
-            src={logo}
-            alt="logo"
-            className="cursor-pointer object-cover"
-          />
+        <div className="flex flex-col gap-5 items-center md:items-start">
+          <IconLogo className="cursor-pointer text-white" />
           <div className="flex items-center gap-4">
             {icons.map((Icon, index) => (
                 <Icon

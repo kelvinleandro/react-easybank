@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import logo from "@/assets/logo.svg";
 import icon_hamburger from "@/assets/icon-hamburger.svg";
 import icon_close from "@/assets/icon-close.svg"
+import IconLogo from "../Icons/IconLogo";
 
 const navItems = ["Home", "About", "Contact", "Blog", "Careers"];
 
@@ -14,7 +14,7 @@ type Props = {
 const Header = ({ toggleSidebar, sidebarOpened }: Props) => {
   return (
     <div className="w-full flex items-center justify-between px-6 py-4 md:px-20 md:pb-0">
-      <Image src={logo} alt="logo" className="cursor-pointer md:mb-3" />
+      <IconLogo className="cursor-pointer md:mb-3" />
 
       <div className="hidden md:flex items-center gap-6">
         {navItems.map((item, index) => (
