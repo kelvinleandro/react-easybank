@@ -48,7 +48,7 @@ const LatestArticles = () => {
           articles.map((item, index) => (
             <div key={index} className="rounded-lg overflow-hidden border-2">
               <div className="w-full relative h-60 md:h-48">
-                <Image src={item.image} alt="" layout="fill" objectFit="cover" />
+                <Image src={item.image} alt="" fill className="object-cover" />
               </div>
               <div className="text-left flex flex-col gap-2 p-8">
                 <p className="text-sm text-grayish-blue font-light">By {item.author}</p>

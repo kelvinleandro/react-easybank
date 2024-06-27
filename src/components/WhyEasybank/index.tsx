@@ -35,7 +35,7 @@ const reasons = [
 const WhyEasybank = () => {
   return (
     <div className="w-full px-9 py-8 md:py-24 md:px-28 bg-light-grayish-blue flex flex-col gap-14 items-center md:items-start">
-      <div className="flex flex-col gap-5 max-w-[50%] items-center md:items-start">
+      <div className="flex flex-col gap-5 md:max-w-[50%] items-center md:items-start">
         <h1 className="text-bold text-center md:text-left text-4xl text-dark-blue">
           Why choose Easybank?
         </h1>
