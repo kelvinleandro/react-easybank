@@ -29,11 +29,15 @@ export default function Home() {
   return (
     <div className="w-full h-full flex flex-col">
       <Header toggleSidebar={handleSidebarToggle} sidebarOpened={sidebarOpened} />
-      <Sidebar isOpen={sidebarOpened} />
-      <Hero />
-      <WhyEasybank />
-      <LatestArticles />
-      <Footer />
+      <div className="w-full relative">
+        <Sidebar isOpen={sidebarOpened} />
+        <div className={`relative z-30 ${sidebarOpened ? "pointer-events-none" : "pointer-events-auto"}`}>
+          <Hero />
+          <WhyEasybank />
+          <LatestArticles />
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }
