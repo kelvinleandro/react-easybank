@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer.tsx";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import LatestArticles from "@/components/LatestArticles";
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <WhyEasybank />
       <LatestArticles />
+      <Footer />
     </div>
   );
 }
