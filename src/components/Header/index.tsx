@@ -13,8 +13,8 @@ type Props = {
 
 const Header = ({ toggleSidebar, sidebarOpened }: Props) => {
   return (
-    <div className="w-full flex items-center justify-between px-6 py-4 md:px-20 md:pb-0">
-      <IconLogo className="cursor-pointer md:mb-3" />
+    <div className="w-full fixed md:relative z-50 flex items-center justify-between px-6 py-4 md:px-20 md:pb-0 bg-white">
+      <IconLogo className="cursor-pointer md:mb-3 text-dark-blue" />
 
       <div className="hidden md:flex items-center gap-6">
         {navItems.map((item, index) => (
