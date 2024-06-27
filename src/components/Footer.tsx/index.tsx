@@ -26,8 +26,7 @@ const Footer = () => {
           <Image
             src={logo}
             alt="logo"
-            className="cursor-pointer"
-            objectFit="cover"
+            className="cursor-pointer object-cover"
           />
           <div className="flex items-center gap-4">
             {icons.map((Icon, index) => (
@@ -50,8 +49,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-5">
-        <button className="self-center cursor-pointer bg-gradient-to-r from-lime-green to-bright-cyan hover:from-lime-green/70 hover:to-bright-cyan/70 text-white font-bold px-5 py-3 rounded-full">
+      <div className="flex flex-col gap-5 items-center md:items-end">
+        <button className="cursor-pointer bg-gradient-to-r from-lime-green to-bright-cyan hover:from-lime-green/70 hover:to-bright-cyan/70 text-white font-bold px-5 py-3 rounded-full">
           Request Invite
         </button>
         <p className="text-center text-grayish-blue">

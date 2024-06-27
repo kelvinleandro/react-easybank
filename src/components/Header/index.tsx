@@ -1,18 +1,27 @@
 import React from "react";
-import icon_hamburger from "@/assets/icon-hamburger.svg";
-import logo from "@/assets/logo.svg";
 import Image from "next/image";
+import logo from "@/assets/logo.svg";
+import icon_hamburger from "@/assets/icon-hamburger.svg";
+import icon_close from "@/assets/icon-close.svg"
 
 const navItems = ["Home", "About", "Contact", "Blog", "Careers"];
 
-const Header = () => {
+type Props = {
+  toggleSidebar: () => void;
+  sidebarOpened: boolean;
+};
+
+const Header = ({ toggleSidebar, sidebarOpened }: Props) => {
   return (
     <div className="w-full flex items-center justify-between px-6 py-4 md:px-20 md:pb-0">
       <Image src={logo} alt="logo" className="cursor-pointer md:mb-3" />
 
       <div className="hidden md:flex items-center gap-6">
         {navItems.map((item, index) => (
-          <div key={index} className="group cursor-pointer font-medium text-grayish-blue hover:text-dark-blue relative">
+          <div
+            key={index}
+            className="group cursor-pointer font-medium text-lg text-grayish-blue hover:text-dark-blue relative"
+          >
             <p className="mb-6">{item}</p>
             <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-lime-green to-bright-cyan scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-300"></div>
           </div>
@@ -26,9 +35,10 @@ const Header = () => {
       </div>
 
       <Image
-        src={icon_hamburger}
-        alt="hamburger menu"
-        className="block md:hidden cursor-pointer"
+        src={sidebarOpened ? icon_close : icon_hamburger}
+        alt={sidebarOpened ? "close sidebar menu" : "open sidebar menu"}
+        className="block md:hidden cursor-pointer h-5 w-5"
+        onClick={toggleSidebar}
       />
     </div>
   );
